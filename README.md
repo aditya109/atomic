@@ -1,5 +1,5 @@
 # shazam ⚡️
-Just a safe and better alternative http to curl for golang
+Just a safe and better http-to-curl for golang
 --------
 
 `shazam` is a plugin which is used to print curl for your HTTP requests, in pre-flight scenarios.
