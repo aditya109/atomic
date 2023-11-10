@@ -1,4 +1,4 @@
-package shazam_test
+package atomic_test
 
 import (
 	"bytes"
@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/aditya109/shazam"
+	"github.com/aditya109/atomic"
 )
 
 func TestBoom(t *testing.T) {
@@ -105,7 +105,7 @@ func TestBoom(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := shazam.Boom(tt.args.request)
+			got, err := atomic.Boom(tt.args.request)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("Boom() error = %v, wantErr %v", err, tt.wantErr)
 				return

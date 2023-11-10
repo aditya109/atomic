@@ -1,4 +1,4 @@
-module github.com/aditya109/shazam
+module github.com/aditya109/atomic
 
 go 1.21.4
 

@@ -1,4 +1,4 @@
-package shazam
+package atomic
 
 import (
 	"bytes"
@@ -36,7 +36,7 @@ func (w *wand) failSafe(request *http.Request) error {
 		body, err := io.ReadAll(request.Body)
 		if err != nil {
 			if err != nil {
-				return fmt.Errorf("shazam was unable to read body into bytes, error : %v", err)
+				return fmt.Errorf("atomic was unable to read body into bytes, error : %v", err)
 			}
 		}
 		w.R = request.Clone(request.Context())
@@ -72,7 +72,7 @@ func (w *wand) addRequestFlag() error {
 		buf := new(strings.Builder)
 		_, err := io.Copy(buf, w.R.Body)
 		if err != nil {
-			return fmt.Errorf("shazam was unable to read body into bytes, error : %v", err)
+			return fmt.Errorf("atomic was unable to read body into bytes, error : %v", err)
 		}
 
 		w.C = append(w.C, fmt.Sprintf("--data-raw '%s'", buf.String()))

@@ -1,15 +1,15 @@
-# shazam ⚡️
+# atomic ⚡️
 Just a safe and better http-to-curl for golang
 --------
 
-`shazam` is a plugin which is used to print curl for your HTTP requests, in pre-flight scenarios.
-The word safe is used here, as `shazam` implements a naïve technique to protect sensitive request pointers.
+`atomic` is a plugin which is used to print curl for your HTTP requests, in pre-flight scenarios.
+The word safe is used here, as `atomic` implements a naïve technique to protect sensitive request pointers.
 
 ## How to get started ?
 
-1. Import `shazam` in your code.
+1. Import `atomic` in your code.
     ```
-    go get github.com/Kieraya/shazam
+    go get github.com/Kieraya/atomic
     ```
     
 2. Add the following to your code.
@@ -17,7 +17,7 @@ The word safe is used here, as `shazam` implements a naïve technique to protect
     ...
         request, err := http.NewRequest(http.MethodGet, url, nil)
         // handle error
-        curl, err := shazam.Boom(request)
+        curl, err := atomic.Boom(request)
         if err != nil {
             log.Println(err)
         }
