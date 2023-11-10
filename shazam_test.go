@@ -6,7 +6,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/Kieraya/shazam"
+	"github.com/aditya109/shazam"
 )
 
 func TestBoom(t *testing.T) {
