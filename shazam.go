@@ -16,6 +16,7 @@ type wand struct {
 	Z string
 }
 
+// Boom take *http.Request and provides string giving a curl for in-usage request
 func Boom(request *http.Request) (string, error) {
 	var w wand
 	if err := w.failSafe(request); err != nil {

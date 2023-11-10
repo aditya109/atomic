@@ -12,8 +12,8 @@
 # This should make it easy to add new rules without breaking existing ones.
 
 # Global rule:
-*           @daitya96 @utsav-upendra @vinay-furlenco
+*           @aditya109
 
 # Go files:
-*.go  @daitya96 @vinay-furlenco @utsav-upendra
+*.go  @aditya109
 
